@@ -35,7 +35,7 @@ namespace MarkovChain
 
 			// generate word list from the passage
 			passage = new string(passage.Where(
-				c => !char.IsPunctuation(c) || c.Equals('\'') || c.Equals('-')).ToArray()); // remove punctuations from passage text
+				c => !char.IsPunctuation(c) || c.Equals('/') || c.Equals('\'') || c.Equals('-')).ToArray()); // remove punctuations from passage text
 			var words = passage.Replace('/', ' ').Replace('-', ' ').Split(' ').ToList(); // get list of word from the passage
 
 			// clean up the word list
